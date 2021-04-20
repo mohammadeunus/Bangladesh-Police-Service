@@ -20,15 +20,97 @@
         android:layout_marginBottom="25dp"
         android:paddingBottom="100dp"
         app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="25dp" />
+        app:cardCornerRadius="25dp"
+        >
 
-    <ImageView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="552dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:paddingTop="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:outlineAmbientShadowColor="@color/material_on_surface_emphasis_medium"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="10dp"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                tools:targetApi="p">
+
+                <EditText
+                    android:id="@+id/editTextTextPersonName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/searchbar"
+                    android:inputType="textPersonName"
+                    />
+
+
+            </androidx.cardview.widget.CardView>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_marginLeft="75dp"
+                android:layout_marginRight="75dp"
+                android:shadowRadius="100"
+                android:layout_height="wrap_content"
+                >
+            </Button>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_centerHorizontal="true"
+                android:hint="@string/insertinfo1"
+                >
+            </EditText>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_centerHorizontal="true"
+                android:hint="@string/insertinfo1"
+                >
+            </EditText>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_centerHorizontal="true"
+                android:hint="@string/insertinfo1"
+                >
+            </EditText>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_centerHorizontal="true"
+                android:hint="@string/insertinfo1"
+                >
+            </EditText>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+        <ImageView
         android:id="@+id/userImageProfile"
+
         android:layout_width="200dp"
         android:layout_height="250dp"
         android:layout_centerHorizontal="true"
-        android:elevation="50dp"
+        android:layout_marginTop="-22dp"
+        android:elevation="80dp"
         android:src="@drawable/pci">
-    </ImageView>
+        </ImageView>
 
 </RelativeLayout>

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">newCrimeReport</string>
+    <string name="searchbar">search for missing person</string>
+    <string name="insertinfo1">username</string>
 </resources>
