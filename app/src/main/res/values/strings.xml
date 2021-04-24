@@ -1,5 +1,21 @@
 <resources>
-    <string name="app_name">newCrimeReport</string>
-    <string name="searchbar">search for missing person</string>
-    <string name="insertinfo1">username</string>
+    <string name="app_name">Alibaba Door</string>
+    <string name="home_page">Alibaba </string>
+    <string name="textview1">User Name</string>
+    <string name="textview2">Password</string>
+    <string name="button">Sign In</string>
+    <string name="textview3" />
+    <string name="user_name">User Name</string>
+    <string name="insertpass">insert your password here</string>
+    <string name="registerlink">not registered? sign up here </string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First Name</string>
+    <string name="username">username</string>
+    <string name="mobile_number">mobile number</string>
+    <string name="email_address">email address</string>
+    <string name="password">password</string>
+    <string name="buttonReg">Register</string>
+    <string name="textview4" />
+    <string name="Nid_number">Nid number</string>
+
 </resources>
