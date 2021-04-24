@@ -10,8 +10,6 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,19 +23,18 @@ public class MainActivity extends AppCompatActivity {
         String usernameText =usernameField.getText().toString();
         String usernamePass =passwordField.getText().toString();
 
-
-
         //pass word checker
         //dummy
-        String dummypass="test";
+        String dummyPass="test";
         String dummyName = "test";
+
         TextView errorLabel =findViewById(R.id.textView3);
-
-        if(usernameText.equals(dummyName) && usernamePass.equals(dummypass))
+        if(usernameText.equals(dummyName) && usernamePass.equals(dummyPass))
         {
-
             errorLabel.setTextColor(Color.GREEN);
             errorLabel.setText("Successful");
+            Intent CrimeReportOptionsScreen = new Intent(MainActivity.this, CrimeReportOptions.class);
+            startActivity(CrimeReportOptionsScreen);
         }
         else
         {

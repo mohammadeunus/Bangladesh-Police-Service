@@ -17,5 +17,14 @@
     <string name="buttonReg">Register</string>
     <string name="textview4" />
     <string name="Nid_number">Nid number</string>
+    <string name="nid_number_hints">17 digit nid number</string>
+    <string name="RegistrationSuccessful">Registration Successful</string>
+    <string name="incorrectNidnumber">incorrect Nid number</string>
+    <string name="todo">TODO</string>
+    <string name="button1">complain</string>
+    <string name="button2">General diary</string>
+    <string name="button3">Missing person</string>
+    <string name="button4">Cyber crime</string>
+    <string name="button5">Read the instruction</string>
 
 </resources>

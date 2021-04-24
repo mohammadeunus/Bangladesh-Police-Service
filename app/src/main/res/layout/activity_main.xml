@@ -13,7 +13,7 @@
     android:paddingRight="45dp"
     android:paddingEnd="45dp"
     android:background="@drawable/gradientbackground"
->
+    >
 
     <ImageView
         android:id="@+id/userImageProfile"
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:accessibilityLiveRegion="assertive"
-        android:autofillHints=""
+        android:hint="@string/nid_number_hints"
         android:ems="10"
         android:fontFamily="sans-serif"
         android:inputType="textPersonName"
@@ -76,6 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:ems="10"
+        android:textAlignment="center"
         android:textSize="12sp"
         android:inputType="textPassword"
         />
@@ -85,6 +86,7 @@
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/cardview_dark_background"
         android:fontFamily="cursive"
         android:text="@string/button"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"

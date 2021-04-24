@@ -6,19 +6,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_marginTop="30dp"
-    android:layout_marginLeft="20dp"
-    android:layout_marginRight="20dp"
-    android:layout_marginBottom="20dp"
+    android:paddingLeft="45dp"
+    android:paddingRight="45dp"
+    android:background="@drawable/gradientbackground"
     tools:context=".registration">
+
+    <ImageView
+        android:id="@+id/userImageProfile"
+        android:layout_width="154dp"
+        android:layout_height="138dp"
+        android:layout_gravity="center"
+        android:src="@drawable/pci">
+    </ImageView>
 
     <EditText
         android:id="@+id/editTextNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/Nid_number"
-        android:layout_margin="10dp"
+        android:hint="@string/nid_number_hints"
+        android:layout_margin="5dp"
         android:inputType="number"
         />
 
@@ -29,7 +36,7 @@
         android:ems="10"
         android:hint="@string/username"
         android:inputType="textPersonName"
-        android:layout_margin="10dp"
+        android:layout_margin="5dp"
         />
 
     <EditText
@@ -39,7 +46,7 @@
         android:ems="10"
         android:hint="@string/mobile_number"
         android:inputType="phone"
-        android:layout_margin="10dp"
+        android:layout_margin="5dp"
         />
 
     <EditText
@@ -49,7 +56,7 @@
         android:ems="10"
         android:hint="@string/email_address"
         android:inputType="textEmailAddress"
-        android:layout_margin="10dp"
+        android:layout_margin="5dp"
         />
 
     <EditText
@@ -59,28 +66,27 @@
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
-        android:layout_margin="10dp"
+        android:layout_margin="5dp"
         />
+
     <Button
-        android:layout_margin="10dp"
         android:id="@+id/buttonReg"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="178dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:backgroundTint="@color/cardview_dark_background"
         android:fontFamily="cursive"
+        android:onClick="ans2reg"
         android:text="@string/buttonReg"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="24sp"
-        android:typeface="normal"
-        android:onClick="ans2reg"
-        />
+        android:textSize="12sp"
+        android:typeface="normal" />
     <TextView
-        android:layout_margin="10dp"
-        android:id="@+id/textView3"
+        android:id="@+id/textviewError2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/textview4"
         android:textAlignment="center"
-        android:textColor="@android:color/holo_red_light"
         />
 
 </LinearLayout>
