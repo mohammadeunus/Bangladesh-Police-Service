@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplicationEmpty">
-        <activity android:name=".CrimeReportOptions" />
+        <activity android:name=".CrimeReportOptions"></activity>
         <activity android:name=".registration" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:windowSoftInputMode="stateAlwaysVisible">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
