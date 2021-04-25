@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Alibaba Door</string>
-    <string name="home_page">Alibaba </string>
+    <string name="app_name">Report Crime</string>
+    <string name="home_page"> </string>
     <string name="textview1">User Name</string>
     <string name="textview2">Password</string>
     <string name="button">Sign In</string>
@@ -26,5 +26,4 @@
     <string name="button3">Missing person</string>
     <string name="button4">Cyber crime</string>
     <string name="button5">Read the instruction</string>
-
 </resources>

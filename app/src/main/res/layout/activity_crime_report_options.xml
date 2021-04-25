@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="98dp"
         android:orientation="horizontal"
+        android:layout_gravity="center"
         android:paddingStart="14dp"
         android:paddingEnd="4dp">
 
@@ -34,7 +35,7 @@
 
             <TextView
                 android:id="@+id/verifiedUser"
-                android:layout_width="150dp"
+                android:layout_width="220dp"
                 android:layout_height="25dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif"
@@ -52,7 +53,7 @@
                 android:id="@+id/verifiedUserMobileNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="cursive"
+                android:fontFamily="sans-serif"
                 android:lineSpacingExtra="24sp"
                 android:text=" +880 1521430101"
                 android:textAlignment="viewStart"
@@ -60,17 +61,7 @@
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
-
         </LinearLayout>
-
-        <ImageView
-            android:layout_width="36dp"
-            android:layout_marginStart="55dp"
-            android:layout_height="29dp"
-            android:layout_gravity="end"
-            android:src="@drawable/pngaaa"
-            tools:ignore="ContentDescription">
-        </ImageView>
 
     </LinearLayout>
 
