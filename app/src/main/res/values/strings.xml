@@ -26,4 +26,8 @@
     <string name="button3">Missing person</string>
     <string name="button4">Cyber crime</string>
     <string name="button5">Read the instruction</string>
+    <string name="previsous_data">Previsous Data</string>
+    <string name="previous_data">Previous Data</string>
+    <string name="back">Back</string>
+    <string name="dummy_title">Dummy Title</string>
 </resources>

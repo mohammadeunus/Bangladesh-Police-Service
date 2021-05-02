@@ -114,7 +114,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5sp"
             android:backgroundTint="@color/cardview_dark_background"
-            android:text="Previsous Data"
+            android:text="@string/previsous_data"
             app:cornerRadius="15dp" />
 
         <Button
