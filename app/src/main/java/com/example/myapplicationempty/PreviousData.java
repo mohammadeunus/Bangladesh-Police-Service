@@ -17,8 +17,7 @@ public class PreviousData extends AppCompatActivity {
 
         String Dummytitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.";
         String DummyText = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa " +
-                "quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur " +
-                "aut odit aut fugit.";
+                "quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.";
 
         TextView[] title = { findViewById(R.id.dummyTitle1), findViewById(R.id.dummyTitle2), findViewById(R.id.dummyTitle3), findViewById(R.id.dummyTitle4) };
         TextView[] description = { findViewById(R.id.description1), findViewById(R.id.description2), findViewById(R.id.description3), findViewById(R.id.description4) };

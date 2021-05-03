@@ -24,6 +24,15 @@ public class CrimeReportOptions extends AppCompatActivity {
                 startActivity(previousDataPage);
             }
         });
+
+        Button policeRatingsClick = findViewById(R.id.policeRatingsButton);
+        policeRatingsClick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent policeRatingPage = new Intent(CrimeReportOptions.this, PoliceRatings.class);
+                startActivity(policeRatingPage);
+            }
+        });
     }
 
     public void profile(View view) {

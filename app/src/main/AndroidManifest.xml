@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplicationEmpty">
-        <activity android:name=".PreviousData"></activity>
-        <activity android:name=".MainActivity2"></activity>
+        <activity android:name=".PoliceRatings"/>
+        <activity android:name=".PreviousData" />
+        <activity android:name=".MainActivity2" />
         <activity android:name=".user_profile" />
         <activity android:name=".CrimeReportOptions" />
         <activity android:name=".registration" />
