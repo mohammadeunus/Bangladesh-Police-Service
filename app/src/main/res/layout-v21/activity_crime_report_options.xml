@@ -114,11 +114,11 @@
             android:layout_height="wrap_content"
             android:layout_margin="5sp"
             android:backgroundTint="@color/cardview_dark_background"
-            android:text="Previsous Data"
+            android:text="@string/previous_data"
             app:cornerRadius="15dp" />
 
         <Button
-            android:id="@+id/policeRatingsButton2"
+            android:id="@+id/policeRatingsButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5sp"

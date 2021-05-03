@@ -26,4 +26,11 @@
     <string name="button3">Missing person</string>
     <string name="button4">Cyber crime</string>
     <string name="button5">Read the instruction</string>
+    <string name="previous_data">Previous Data</string>
+    <string name="back">Back to the homescreen</string>
+    <string name="dummy_title">Dummy Title</string>
+    <string name="police_ratings">Police Ratings</string>
+    <string name="submit">Submit</string>
+    <string name="rate_your_investigation_officer">Rate your invastigation officer</string>
+    <string name="submit_rating">Submit Rating</string>
 </resources>
