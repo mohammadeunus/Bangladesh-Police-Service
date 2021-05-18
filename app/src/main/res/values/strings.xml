@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Report Crime</string>
+    <string name="app_name">BD Police Services</string>
     <string name="home_page"> </string>
     <string name="textview1">User Name</string>
     <string name="textview2">Password</string>
