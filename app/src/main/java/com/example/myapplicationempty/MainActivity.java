@@ -1,4 +1,4 @@
-package com.example.myapplicationempty;
+ package com.example.myapplicationempty;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate called");
         setContentView(R.layout.activity_main);
+        /*
         if(savedInstanceState != null)
         {
             setContentView(R.layout.activity_main_land);
@@ -32,23 +33,9 @@ public class MainActivity extends AppCompatActivity {
         else
         {
             setContentView(R.layout.activity_main);
-        }
+        }*/
     }
 
-    /*
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-
-            if(newConfig.orientation==Configuration.ORIENTATION_LANDSCAPE)
-            {
-                setContentView(R.layout.activity_main_land);
-            }
-            else
-            {
-                setContentView(R.layout.activity_main);
-            }
-    }*/
 
     @Override
     protected void onSaveInstanceState(@NonNull Bundle savedInstanceState) {

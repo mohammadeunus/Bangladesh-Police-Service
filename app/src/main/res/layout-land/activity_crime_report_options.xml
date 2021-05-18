@@ -67,7 +67,7 @@
         android:orientation="horizontal"
         android:padding="15sp"
 
-            >
+        >
 
         <LinearLayout
             android:layout_width="344dp"
@@ -104,30 +104,30 @@
 
 
         </LinearLayout>
-            <LinearLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="2dp"
+            >
+            <Button
+                android:id="@+id/button5"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="2dp"
-                >
-                <Button
-                    android:id="@+id/button5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:backgroundTint="@color/cardview_dark_background"
-                    android:text="@string/button4"
-                    app:cornerRadius="20dp" />
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:backgroundTint="@color/cardview_dark_background"
+                android:text="@string/button4"
+                app:cornerRadius="20dp" />
 
-                <Button
-                    android:id="@+id/button6"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:backgroundTint="@color/cardview_dark_background"
-                    android:text="@string/button5"
-                    app:cornerRadius="20dp" />
-            </LinearLayout>
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/cardview_dark_background"
+                android:text="@string/button5"
+                app:cornerRadius="20dp" />
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

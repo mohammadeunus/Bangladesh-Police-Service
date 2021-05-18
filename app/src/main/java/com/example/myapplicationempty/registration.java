@@ -17,14 +17,7 @@ public class registration extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
-        if(savedInstanceState != null)
-        {
-            setContentView(R.layout.activity_registration_land);
-        }
-        else
-        {
-            setContentView(R.layout.activity_registration);
-        }
+
     }
     @Override
     protected void onStart() {
