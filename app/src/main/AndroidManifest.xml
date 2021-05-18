@@ -8,9 +8,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+<<<<<<< Updated upstream
         android:theme="@style/Theme.MyApplicationEmpty" >
         <activity android:name=".MainActivity2" >
         </activity>
+=======
+        android:theme="@style/Theme.MyApplicationEmpty">
+        <activity android:name=".PoliceRatings"/>
+        <activity android:name=".PreviousData" />
+>>>>>>> Stashed changes
         <activity android:name=".user_profile" />
         <activity android:name=".CrimeReportOptions" />
         <activity android:name=".registration" />
