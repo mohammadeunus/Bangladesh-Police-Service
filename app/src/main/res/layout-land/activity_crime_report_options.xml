@@ -90,7 +90,9 @@
                 android:layout_margin="5dp"
                 android:backgroundTint="@color/cardview_dark_background"
                 android:text="@string/button1"
-                app:cornerRadius="20dp" />
+                app:cornerRadius="20dp"
+                android:onClick="ButtonComplain"
+                />
 
             <Button
                 android:id="@+id/button3"

@@ -26,4 +26,9 @@
     <string name="button3">Missing person</string>
     <string name="button4">Cyber crime</string>
     <string name="button5">Read the instruction</string>
+    <string name="ComplainTypeOfCrime">Complain Type</string>
+    <string name="ComplainTitle">COMPLAINT AGAINST</string>
+    <string name="ProfileUserName">Md.Eunusur Rahaman Bhuiyan</string>
+    <string name="ProfileUserMobile">" +880 1521430101"</string>
+    <string name="ComplainAccuserName">Name of the accuser</string>
 </resources>

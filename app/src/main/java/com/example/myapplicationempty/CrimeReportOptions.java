@@ -23,4 +23,9 @@ public class CrimeReportOptions extends AppCompatActivity {
         startActivity(user_profiles);
 
     }
+
+    public void ButtonComplain(View view) {
+        Intent ComplainPage = new Intent(CrimeReportOptions.this, Complain.class);
+        startActivity(ComplainPage);
+    }
 }
