@@ -20,7 +20,7 @@
     </ImageView>
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/NidNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -30,7 +30,7 @@
         />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/EditTextTextPersonName3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -40,7 +40,7 @@
         />
 
     <EditText
-        android:id="@+id/editTextPhone"
+        android:id="@+id/EditTextPhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -50,7 +50,7 @@
         />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/EditTextTextEmailAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -60,7 +60,7 @@
         />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/EditTextTextPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -88,5 +88,11 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

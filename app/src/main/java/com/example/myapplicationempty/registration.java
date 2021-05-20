@@ -8,15 +8,30 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class registration extends AppCompatActivity {
     public static final String TAG="registration";
+    FirebaseAuth fAuth;
+    ProgressBar progressBar;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+        EditText fNidNumber = findViewById(R.id.NidNumber);
+        EditText fEditTextTextPersonName3 = findViewById(R.id.NidNumber);
+        EditText fEditTextPhone = findViewById(R.id.NidNumber);
+        EditText fEditTextTextEmailAddress = findViewById(R.id.NidNumber);
+        EditText fEditTextTextPassword = findViewById(R.id.NidNumber);
+
+        fAuth =FirebaseAuth.getInstance();
+        progressBar =findViewById(R.id.progressBar2);
 
     }
     @Override
@@ -63,7 +78,7 @@ public class registration extends AppCompatActivity {
         else
         {
             textviewError2.setTextColor(Color.RED);
-            textviewError2.setText("incorrect");
+            textviewError2.setText("Incorrect");
         }
     }
 }

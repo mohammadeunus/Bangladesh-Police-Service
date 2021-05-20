@@ -11,7 +11,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+ public class MainActivity extends AppCompatActivity {
     public static final String TAG="MainActivity";
 
     //password checker
@@ -34,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
         {
             setContentView(R.layout.activity_main);
         }*/
+
+
+
     }
 
 
@@ -47,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         Log.d(TAG, "onStart called");
+
     }
 
     @Override
