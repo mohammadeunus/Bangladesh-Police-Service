@@ -112,15 +112,6 @@
         android:typeface="normal" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="@string/textview3"
-        android:textAlignment="center"
-        android:textColor="@android:color/holo_red_light" />
-
-    <TextView
         android:id="@+id/textView"
         android:layout_width="206dp"
         android:layout_height="17dp"
@@ -133,4 +124,11 @@
         android:onClick="clickReg"
         android:text="@string/registerlink"
         android:textAlignment="center" />
+
+    <ProgressBar
+        android:id="@+id/progressBar5"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 </LinearLayout>

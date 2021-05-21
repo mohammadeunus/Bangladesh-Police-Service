@@ -85,24 +85,18 @@ import com.google.firebase.auth.FirebaseUser;
         TextView usernameField = findViewById(R.id.insertname);
         TextView passwordField = findViewById(R.id.TxtPassword);
 
+
         String usernameText =usernameField.getText().toString();
         String usernamePass =passwordField.getText().toString();
 
-
-
-        TextView errorLabel =findViewById(R.id.textView3);
         if(usernameText.equals(dummyName) && usernamePass.equals(dummyPass))
         {
-            errorLabel.setTextColor(Color.GREEN);
-            errorLabel.setText("Successful");
-            Intent CrimeReportOptionsScreen = new Intent(MainActivity.this, CrimeReportOptions.class);
-            startActivity(CrimeReportOptionsScreen);
         }
         else
         {
-            errorLabel.setTextColor(Color.RED);
-            errorLabel.setText("incorrect");
+            passwordField.setError("wrong username or password");
         }
+
     }
 
     public void clickReg(View view) {
