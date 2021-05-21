@@ -3,22 +3,43 @@ package com.example.myapplicationempty;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ProgressBar;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 
 public class registration extends AppCompatActivity {
     public static final String TAG="registration";
     EditText mNidNumber,mUserName,mMobileNumber,mEmail,mPassword;
+    FirebaseFirestore fStore;
+    FirebaseAuth fAuth;
+    ProgressBar progressBar;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+        fAuth = FirebaseAuth.getInstance();
+        fStore = FirebaseFirestore.getInstance();
+        progressBar = findViewById(R.id.progressBar);
+        if(fAuth.getCurrentUser() != null){
+            startActivity(new Intent(registration.this,MainActivity.class));
+            finish();
+        }
 
     }
     @Override
@@ -59,15 +80,34 @@ public class registration extends AppCompatActivity {
         mMobileNumber = findViewById(R.id.editTextPhone);
 
         String nidNumberForViewById =mNidNumber.getText().toString();
+        String maEmail= mEmail.getText().toString();
+        String maPassword=mPassword.getText().toString();
+        String maMobileNumber=mMobileNumber.getText().toString();
+        String maUserName=mUserName.getText().toString();
 
-        if(nidNumberForViewById.length() == 7)
+        if(nidNumberForViewById.length() != 7)
         {
-            Intent MainActivityScreen = new Intent(registration.this, MainActivity.class);
-            startActivity(MainActivityScreen);
+
         }
         else
         {
             mNidNumber.setError("incorrect, provide at least 7digit");
+        }
+        if(TextUtils.isEmpty(maEmail))
+        {
+            mEmail.setError("email required");
+        }
+        if(maMobileNumber.length() <11)
+        {
+            mMobileNumber.setError("invalid mobile number");
+        }
+        if(maPassword.length() <6)
+        {
+            mPassword.setError("password has to be at least 7char");
+        }
+        if(maUserName.length() <5)
+        {
+            mUserName.setError("invalid username");
         }
     }
 }
