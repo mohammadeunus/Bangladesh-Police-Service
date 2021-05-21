@@ -62,8 +62,7 @@ public class registration extends AppCompatActivity {
         }
         else
         {
-            textviewError2.setTextColor(Color.RED);
-            textviewError2.setText("incorrect");
+            editTextNumberForViewById.setError("incorrect, provide at least 7digit");
         }
     }
 }
