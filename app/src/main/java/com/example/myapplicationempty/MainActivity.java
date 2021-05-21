@@ -91,6 +91,8 @@ import com.google.firebase.auth.FirebaseUser;
 
         if(usernameText.equals(dummyName) && usernamePass.equals(dummyPass))
         {
+            Intent CrimeReportOptionsScreen = new Intent(MainActivity.this, CrimeReportOptions.class);
+            startActivity(CrimeReportOptionsScreen);
         }
         else
         {
@@ -104,3 +106,5 @@ import com.google.firebase.auth.FirebaseUser;
         startActivity(registrationScreen);
     }
 }
+
+
