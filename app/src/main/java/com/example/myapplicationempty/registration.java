@@ -60,7 +60,7 @@ public class registration extends AppCompatActivity {
         EditText editTextNumberForViewById = findViewById(R.id.editTextNumber);
         String nidNumberForViewById =editTextNumberForViewById.getText().toString();
         TextView textviewError2 =findViewById(R.id.textviewError2);
-        if(nidNumberForViewById.length() == 17)
+        if(nidNumberForViewById.length() == 7)
         {
             textviewError2.setTextColor(Color.GREEN);
             textviewError2.setText("Registration Successful");
