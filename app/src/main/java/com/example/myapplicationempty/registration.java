@@ -16,7 +16,7 @@ import android.widget.TextView;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class registration<mobileNumber> extends AppCompatActivity {
-    public static final String TAG = "registration";
+    public static final String TAG = "registration";/*
     FirebaseAuth fAuth;
     ProgressBar progressBar;
     EditText fNidNumber = findViewById(R.id.NidNumber);
@@ -24,17 +24,17 @@ public class registration<mobileNumber> extends AppCompatActivity {
     EditText fEditTextPhone = findViewById(R.id.NidNumber);
     EditText fEditTextTextEmailAddress = findViewById(R.id.NidNumber);
     EditText fEditTextTextPassword = findViewById(R.id.NidNumber);
-    String MobileNumber = fEditTextPhone.getText().toString().trim();;
-    String password = fEditTextTextPassword.getText().toString().trim();;
+    String MobileNumber = fEditTextPhone.getText().toString().trim();
+    String password = fEditTextTextPassword.getText().toString().trim();*/
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
-
+/*
         fAuth = FirebaseAuth.getInstance();
-        progressBar = findViewById(R.id.progressBar2);
+        progressBar = findViewById(R.id.progressBar2);*/
 
     }
 
@@ -83,6 +83,7 @@ public class registration<mobileNumber> extends AppCompatActivity {
         }
 
         //user input error handling
+        /*
         if(TextUtils.isEmpty(MobileNumber)){
             fEditTextPhone.setError("mobile number Required.");
             return;
@@ -95,7 +96,7 @@ public class registration<mobileNumber> extends AppCompatActivity {
 
         if(password.length() < 6){
             fEditTextTextPassword.setError("Password Must be >= 6 Characters");
-        }
+        }*/
 
     }
 
