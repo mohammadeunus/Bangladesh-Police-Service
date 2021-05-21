@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
+import java.lang.String;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -23,8 +24,8 @@ public class registration<mobileNumber> extends AppCompatActivity {
     EditText fEditTextPhone = findViewById(R.id.NidNumber);
     EditText fEditTextTextEmailAddress = findViewById(R.id.NidNumber);
     EditText fEditTextTextPassword = findViewById(R.id.NidNumber);
-    String MobileNumber = fEditTextPhone.getText().toString();
-    String password = fEditTextTextPassword.getText().toString();
+    String MobileNumber = fEditTextPhone.getText().toString().trim();;
+    String password = fEditTextTextPassword.getText().toString().trim();;
 
 
     @Override
@@ -80,20 +81,22 @@ public class registration<mobileNumber> extends AppCompatActivity {
             textviewError2.setTextColor(Color.RED);
             textviewError2.setText("Incorrect");
         }
+
+        //user input error handling
+        if(TextUtils.isEmpty(MobileNumber)){
+            fEditTextPhone.setError("mobile number Required.");
+            return;
+        }
+
+        if(TextUtils.isEmpty(password)){
+            fEditTextTextPassword.setError("Password is Required.");
+            return;
+        }
+
+        if(password.length() < 6){
+            fEditTextTextPassword.setError("Password Must be >= 6 Characters");
+        }
+
     }
-
-/*
-     if(MobileNumber.length() <=6)
-
-    {
-        fEditTextPhone.setError("mobile number Required.");
-
-    }
-     if(password.length() <=6)
-
-    {
-        fEditTextTextPassword.setError("Password Must be >= 6 Characters");
-
-    }*/
 
 }
