@@ -8,10 +8,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
+
 
 public class registration extends AppCompatActivity {
     public static final String TAG="registration";
+    EditText mNidNumber,mUserName,mMobileNumber,mEmail,mPassword;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,19 +52,22 @@ public class registration extends AppCompatActivity {
     }
 
     public void ans2reg(View view) {
-        EditText editTextNumberForViewById = findViewById(R.id.editTextNumber);
-        String nidNumberForViewById =editTextNumberForViewById.getText().toString();
-        TextView textviewError2 =findViewById(R.id.textviewError2);
+        mUserName   = findViewById(R.id.editTextTextPersonName3);
+        mNidNumber = findViewById(R.id.editTextNumber);
+        mEmail      = findViewById(R.id.editTextTextEmailAddress);
+        mPassword   = findViewById(R.id.editTextTextPassword);
+        mMobileNumber = findViewById(R.id.editTextPhone);
+
+        String nidNumberForViewById =mNidNumber.getText().toString();
+
         if(nidNumberForViewById.length() == 7)
         {
-            textviewError2.setTextColor(Color.GREEN);
-            textviewError2.setText("Registration Successful");
             Intent MainActivityScreen = new Intent(registration.this, MainActivity.class);
             startActivity(MainActivityScreen);
         }
         else
         {
-            editTextNumberForViewById.setError("incorrect, provide at least 7digit");
+            mNidNumber.setError("incorrect, provide at least 7digit");
         }
     }
 }
