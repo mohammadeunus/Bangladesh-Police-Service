@@ -19,6 +19,12 @@ public class PoliceRatings extends AppCompatActivity {
 
         RatingBar ratingBarSelect = findViewById(R.id.ratingBar);
         RatingBar changedRatingBar = findViewById(R.id.ratingBar1);
+        RatingBar ratingBar3 = findViewById(R.id.ratingBar3);
+        RatingBar ratingBar2 = findViewById(R.id.ratingBar2);
+        RatingBar ratingBar4 = findViewById(R.id.ratingBar4);
+        RatingBar ratingBar5 = findViewById(R.id.ratingBar5);
+        RatingBar ratingBar6 = findViewById(R.id.ratingBar6);
+
         LinearLayout activeLayout = findViewById(R.id.linearLayout);
         LinearLayout changedLayout = findViewById(R.id.layout1);
         changedLayout.setVisibility(View.GONE);
@@ -32,6 +38,11 @@ public class PoliceRatings extends AppCompatActivity {
                 activeLayout.setVisibility(View.GONE);
                 changedLayout.setVisibility(View.VISIBLE);
                 changedRatingBar.setEnabled(false);
+                ratingBar2.setEnabled(false);
+                ratingBar3.setEnabled(false);
+                ratingBar4.setEnabled(false);
+                ratingBar5.setEnabled(false);
+                ratingBar6.setEnabled(false);
             }
         });
 
