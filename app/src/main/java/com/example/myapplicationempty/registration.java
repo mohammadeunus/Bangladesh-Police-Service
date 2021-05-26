@@ -1,5 +1,6 @@
 package com.example.myapplicationempty;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -78,7 +80,10 @@ public class registration extends AppCompatActivity {
         mEmail      = findViewById(R.id.editTextTextEmailAddress);
         mPassword   = findViewById(R.id.editTextTextPassword);
         mMobileNumber = findViewById(R.id.editTextPhone);
+        errorCheck();
 
+    }
+    private void errorCheck(){
         String nidNumberForViewById =mNidNumber.getText().toString();
         String maEmail= mEmail.getText().toString();
         String maPassword=mPassword.getText().toString();
@@ -86,10 +91,6 @@ public class registration extends AppCompatActivity {
         String maUserName=mUserName.getText().toString();
 
         if(nidNumberForViewById.length() != 7)
-        {
-
-        }
-        else
         {
             mNidNumber.setError("incorrect, provide at least 7digit");
         }
@@ -109,5 +110,19 @@ public class registration extends AppCompatActivity {
         {
             mUserName.setError("invalid username");
         }
+        progressBar.setVisibility(View.VISIBLE);
+        fAuth.createUserWithEmailAndPassword(maEmail,maPassword).addOnCompleteListener(this, task -> {
+            progressBar.setVisibility(View.VISIBLE);
+            if (task.isSuccessful()) {
+
+                Toast.makeText(getApplicationContext(), "register successful.",Toast.LENGTH_SHORT).show();
+
+            } else {
+                Toast.makeText(getApplicationContext(), "Authentication failed.",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
     }
 }
+
