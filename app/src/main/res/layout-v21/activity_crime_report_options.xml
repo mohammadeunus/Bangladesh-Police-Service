@@ -47,8 +47,7 @@
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textSize="15sp"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/verifiedUserMobileNumber"
@@ -79,9 +78,7 @@
             android:layout_margin="5sp"
             android:backgroundTint="@color/cardview_dark_background"
             android:text="@string/button1"
-            app:cornerRadius="15dp"
-            android:onClick="ButtonComplain"
-            />
+            app:cornerRadius="15dp" />
 
         <Button
             android:id="@+id/button3"
@@ -117,11 +114,11 @@
             android:layout_height="wrap_content"
             android:layout_margin="5sp"
             android:backgroundTint="@color/cardview_dark_background"
-            android:text="Previsous Data"
+            android:text="@string/previous_data"
             app:cornerRadius="15dp" />
 
         <Button
-            android:id="@+id/policeRatingsButton2"
+            android:id="@+id/policeRatingsButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5sp"
