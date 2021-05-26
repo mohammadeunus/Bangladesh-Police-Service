@@ -1,6 +1,12 @@
 <p align="center">
-  ##Bangladesh Police Services
+  Bangladesh Police Services
 </p>
+<p align="center">
+  ![](app/src/main/res/drawable/pci.png)
+</p>
+A crime Report and missing person finder Apllication
+
+
 
 
 Motivation 
