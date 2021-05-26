@@ -39,5 +39,8 @@ Feature Description
 Citation
 =============
 
-1. Most victims still not reporting cyber crimes: survey | The Daily Star
-2. Cyber Research Report 2020 - Bangladesh Post
+1. [Most victims still not reporting cyber crimes: survey | The Daily Star][dailyStar]
+2. [Cyber Research Report 2020 - Bangladesh Post][cyber]
+
+[dailyStar]=https://www.thedailystar.net/city/news/most-victims-still-not-reporting-cyber-crimes-survey-1807186
+[cyber]=https://bangladeshpost.net/posts/cyber-research-report-2020-39393
