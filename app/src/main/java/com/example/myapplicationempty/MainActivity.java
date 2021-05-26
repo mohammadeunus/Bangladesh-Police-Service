@@ -118,27 +118,7 @@ import com.google.firebase.auth.FirebaseAuth;
     }
 
     public void clickReg(View view) {
-        Intent registrationScreen =new Intent(MainActivity.this, registration.class);
+        Intent registrationScreen =new Intent(getApplicationContext(), registration.class);
         startActivity(registrationScreen);
     }
 }
-
-/*private void firebaseSignIN()
-    {
-        progressBar2.setVisibility(View.VISIBLE);
-        mAuth.signInWithEmailAndPassword(usernameText,usernamePass).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task)
-            {
-                progressBar2.setVisibility(View.INVISIBLE);
-                if(task.isSuccessful())
-                {
-                    startActivity(new Intent(getApplicationContext(),CrimeReportOptions.class));
-                }
-                else
-                {
-                    Toast.makeText(getApplicationContext(), "login failed."+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-    }*/
