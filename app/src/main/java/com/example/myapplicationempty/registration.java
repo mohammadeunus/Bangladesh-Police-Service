@@ -18,6 +18,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -28,7 +29,7 @@ public class registration extends AppCompatActivity {
     EditText mNidNumber,mUserName,mMobileNumber,mEmail,mPassword;
     FirebaseFirestore fStore;
     FirebaseAuth fAuth;
-    ProgressBar progressBar;
+    ProgressBar progressBar1;
 
 
     @Override
@@ -37,7 +38,7 @@ public class registration extends AppCompatActivity {
         setContentView(R.layout.activity_registration);
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
-        progressBar = findViewById(R.id.progressBar);
+        progressBar1 = findViewById(R.id.progressBar3);
         if(fAuth.getCurrentUser() != null){
             startActivity(new Intent(registration.this,MainActivity.class));
             finish();
@@ -110,15 +111,19 @@ public class registration extends AppCompatActivity {
         {
             mUserName.setError("invalid username");
         }
-        progressBar.setVisibility(View.VISIBLE);
+        progressBar1.setVisibility(View.VISIBLE);
         fAuth.createUserWithEmailAndPassword(maEmail,maPassword).addOnCompleteListener(this, task -> {
-            progressBar.setVisibility(View.VISIBLE);
+            progressBar1.setVisibility(View.INVISIBLE);
             if (task.isSuccessful()) {
 
                 Toast.makeText(getApplicationContext(), "register successful.",Toast.LENGTH_SHORT).show();
 
             } else {
-                Toast.makeText(getApplicationContext(), "Authentication failed.",Toast.LENGTH_SHORT).show();
+                if(task.getException() instanceof FirebaseAuthUserCollisionException)
+                {
+                    Toast.makeText(getApplicationContext(), "Error."+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 

@@ -4,23 +4,23 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.res.Configuration;
-import android.graphics.Color;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
  public class MainActivity extends AppCompatActivity {
     public static final String TAG="MainActivity";
-
-    //password checker
-    //dummy
-    String dummyPass="test";
-    String dummyName = "test";
+     private FirebaseAuth mAuth;
+    ProgressBar progressBar2;
 
 
     @Override
@@ -28,17 +28,8 @@ import com.google.firebase.auth.FirebaseUser;
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate called");
         setContentView(R.layout.activity_main);
-        /*
-        if(savedInstanceState != null)
-        {
-            setContentView(R.layout.activity_main_land);
-        }
-        else
-        {
-            setContentView(R.layout.activity_main);
-        }*/
-
-
+        mAuth = FirebaseAuth.getInstance();
+        progressBar2 = findViewById(R.id.progressBar2);
 
     }
 
@@ -80,24 +71,49 @@ import com.google.firebase.auth.FirebaseUser;
         Log.d(TAG, "onResume called");
     }
 
+
     public void ans2signIn(View view) {
-        //read text from editText file
+        TextView usernameField0 = findViewById(R.id.insertname);
+        TextView passwordField0 = findViewById(R.id.TxtPassword);
+
+
+        String usernameText =usernameField0.getText().toString();
+        String usernamePass =passwordField0.getText().toString();
+
+        if(usernamePass.length() <6)
+        {
+            passwordField0.setError("password has to be at least 7char");
+        }
+        if(!TextUtils.isEmpty(usernameText) && usernamePass.length() >5)
+        {
+            firebaseSignIN();
+        }
+
+    }
+    private void firebaseSignIN()
+    {
         TextView usernameField = findViewById(R.id.insertname);
         TextView passwordField = findViewById(R.id.TxtPassword);
-
 
         String usernameText =usernameField.getText().toString();
         String usernamePass =passwordField.getText().toString();
 
-        if(usernameText.equals(dummyName) && usernamePass.equals(dummyPass))
-        {
-            Intent CrimeReportOptionsScreen = new Intent(MainActivity.this, CrimeReportOptions.class);
-            startActivity(CrimeReportOptionsScreen);
-        }
-        else
-        {
-            passwordField.setError("wrong username or password");
-        }
+        progressBar2.setVisibility(View.VISIBLE);
+        mAuth.signInWithEmailAndPassword(usernameText,usernamePass).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task)
+            {
+                progressBar2.setVisibility(View.INVISIBLE);
+                if(task.isSuccessful())
+                {
+                    startActivity(new Intent(getApplicationContext(),CrimeReportOptions.class));
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(), "login failed.\n"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
     }
 
@@ -107,4 +123,22 @@ import com.google.firebase.auth.FirebaseUser;
     }
 }
 
-
+/*private void firebaseSignIN()
+    {
+        progressBar2.setVisibility(View.VISIBLE);
+        mAuth.signInWithEmailAndPassword(usernameText,usernamePass).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task)
+            {
+                progressBar2.setVisibility(View.INVISIBLE);
+                if(task.isSuccessful())
+                {
+                    startActivity(new Intent(getApplicationContext(),CrimeReportOptions.class));
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(), "login failed."+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }*/
