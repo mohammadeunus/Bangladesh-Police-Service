@@ -12,15 +12,9 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.DocumentReference;
+
 import com.google.firebase.firestore.FirebaseFirestore;
 
 
@@ -99,7 +93,7 @@ public class registration extends AppCompatActivity {
         {
             mEmail.setError("email required");
         }
-        if(maMobileNumber.length() <11)
+        if(maMobileNumber.length() !=11)
         {
             mMobileNumber.setError("invalid mobile number");
         }
@@ -111,6 +105,15 @@ public class registration extends AppCompatActivity {
         {
             mUserName.setError("invalid username");
         }
+        if(nidNumberForViewById.length() < 7 && !TextUtils.isEmpty(maEmail ) && maMobileNumber.length() ==11 && maPassword.length() > 5 && maUserName.length() >=5)
+        {
+            firebaseSignUp();
+        }
+    }
+    private void firebaseSignUp()
+    {
+        String maEmail= mEmail.getText().toString();
+        String maPassword=mPassword.getText().toString();
         progressBar1.setVisibility(View.VISIBLE);
         fAuth.createUserWithEmailAndPassword(maEmail,maPassword).addOnCompleteListener(this, task -> {
             progressBar1.setVisibility(View.INVISIBLE);
@@ -126,8 +129,6 @@ public class registration extends AppCompatActivity {
 
             }
         });
-
-
     }
 }
 
