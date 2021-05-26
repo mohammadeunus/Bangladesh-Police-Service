@@ -44,3 +44,10 @@ Citation
 
 [dailyStar]:https://www.thedailystar.net/city/news/most-victims-still-not-reporting-cyber-crimes-survey-1807186
 [cyber]:https://bangladeshpost.net/posts/cyber-research-report-2020-39393
+
+---
+
+### Contact:
+If you have any questions or find any issues, please contact mohammad eunus at ```100eunus [at] gmail [dot] com``` 
+
+---
