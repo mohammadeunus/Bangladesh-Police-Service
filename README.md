@@ -1,3 +1,8 @@
+Bangladesh Police Services
+=============
+A crime Report and missing person finder Apllication
+![](app/src/main/res/drawable/pci.png)
+
 Motivation 
 =============
 Bangladesh has been  facing  the  problems  of  crime,  criminality  and  corruption with its diversified forms, from the very beginning of the country's independence.This project is aimed at developing an android app that can be used to eliminate some drawbacks in the current system of lodging a police complaint. People are avoiding crimes happening around them unless they are facing the same problem. On top of it due to technological advancements we are facing a massive amount of cyber crimes. If we ask them why aren’t you complaining to the police station? The answers are mostly the same: lack of justice, lack of interest to solve a case by police, bribe, they would be harassed instead of getting justice, courage to talk to police face to face also keep the incidents secret and many more. To solve these problems We here propose an android app to tackle these problems, 
