@@ -95,15 +95,7 @@
         android:onClick="ans2signIn"
         />
 
-    <TextView
-        android:layout_margin="10dp"
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/textview3"
-        android:textAlignment="center"
-        android:textColor="@android:color/holo_red_light"
-        />
+
 
     <TextView
         android:id="@+id/textView"
@@ -118,4 +110,10 @@
         android:textAlignment="center"
         android:focusable="true"
         />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>

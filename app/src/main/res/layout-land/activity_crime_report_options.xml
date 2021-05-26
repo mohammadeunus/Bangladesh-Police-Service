@@ -39,11 +39,15 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif"
                 android:lineSpacingExtra="25sp"
+                android:onClick="profile"
+                android:focusable="true"
+                android:clickable="true"
                 android:text="Md.Eunusur Rahaman Bhuiyan"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textSize="15sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                />
 
             <TextView
                 android:id="@+id/verifiedUserMobileNumber"
@@ -55,7 +59,11 @@
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textSize="14sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="profile"
+                android:focusable="true"
+                android:clickable="true"
+                />
 
         </LinearLayout>
 
@@ -67,7 +75,7 @@
         android:orientation="horizontal"
         android:padding="15sp"
 
-            >
+        >
 
         <LinearLayout
             android:layout_width="344dp"
@@ -82,7 +90,9 @@
                 android:layout_margin="5dp"
                 android:backgroundTint="@color/cardview_dark_background"
                 android:text="@string/button1"
-                app:cornerRadius="20dp" />
+                app:cornerRadius="20dp"
+                android:onClick="ButtonComplain"
+                />
 
             <Button
                 android:id="@+id/button3"
@@ -104,30 +114,31 @@
 
 
         </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="2dp"
-                >
-                <Button
-                    android:id="@+id/button5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:backgroundTint="@color/cardview_dark_background"
-                    android:text="@string/button4"
-                    app:cornerRadius="20dp" />
+        <LinearLayout
+            android:layout_width="310dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="2dp"
+            >
 
-                <Button
-                    android:id="@+id/button6"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:backgroundTint="@color/cardview_dark_background"
-                    android:text="@string/button5"
-                    app:cornerRadius="20dp" />
-            </LinearLayout>
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:backgroundTint="@color/cardview_dark_background"
+                android:text="@string/button4"
+                app:cornerRadius="20dp" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/cardview_dark_background"
+                android:text="@string/button5"
+                app:cornerRadius="20dp" />
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

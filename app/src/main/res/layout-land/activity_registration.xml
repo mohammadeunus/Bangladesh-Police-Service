@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:padding="25dp"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingLeft="30dp"
@@ -11,35 +10,28 @@
     android:background="@drawable/gradientbackground"
     tools:context=".registration">
 
-    <ImageView
-        android:id="@+id/userImageProfile"
-        android:layout_width="130dp"
-        android:layout_height="106dp"
-        android:layout_gravity="center"
-        android:src="@drawable/pci">
-    </ImageView>
 
     <EditText
         android:id="@+id/editTextNumber"
-        android:layout_width="554dp"
+        android:layout_width="550dp"
         android:layout_height="32dp"
         android:layout_margin="5dp"
         android:ems="10"
-        android:textSize="10sp"
         android:hint="@string/nid_number_hints"
         android:importantForAutofill="no"
-        android:inputType="number" />
+        android:inputType="number"
+        android:textSize="10sp" />
 
     <EditText
         android:id="@+id/editTextTextPersonName3"
-        android:layout_width="554dp"
+        android:layout_width="551dp"
         android:layout_height="32dp"
         android:layout_margin="5dp"
-        android:textSize="10sp"
         android:ems="10"
         android:hint="@string/username"
         android:importantForAutofill="no"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textSize="10sp" />
 
     <EditText
         android:id="@+id/editTextPhone"

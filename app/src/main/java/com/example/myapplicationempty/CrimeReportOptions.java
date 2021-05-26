@@ -40,4 +40,9 @@ public class CrimeReportOptions extends AppCompatActivity {
         Intent user_profiles = new Intent(CrimeReportOptions.this, user_profile.class);
         startActivity(user_profiles);
     }
+
+    public void ButtonComplain(View view) {
+        Intent ComplainPage = new Intent(CrimeReportOptions.this, Complain.class);
+        startActivity(ComplainPage);
+    }
 }

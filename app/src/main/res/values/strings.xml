@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Report Crime</string>
+    <string name="app_name">BD Police Services</string>
     <string name="home_page"> </string>
     <string name="textview1">User Name</string>
     <string name="textview2">Password</string>
@@ -26,11 +26,10 @@
     <string name="button3">Missing person</string>
     <string name="button4">Cyber crime</string>
     <string name="button5">Read the instruction</string>
-    <string name="previous_data">Previous Data</string>
-    <string name="back">Back to the homescreen</string>
-    <string name="dummy_title">Dummy Title</string>
-    <string name="police_ratings">Police Ratings</string>
-    <string name="submit">Submit</string>
-    <string name="rate_your_investigation_officer">Rate your invastigation officer</string>
-    <string name="submit_rating">Submit Rating</string>
+    <string name="ComplainTypeOfCrime">Complain Type</string>
+    <string name="ComplainTitle">COMPLAINT AGAINST</string>
+    <string name="ProfileUserName">Md.Eunusur Rahaman Bhuiyan</string>
+    <string name="ProfileUserMobile">" +880 1521430101"</string>
+    <string name="ComplainAccuserName">Name of the accuser</string>
+
 </resources>

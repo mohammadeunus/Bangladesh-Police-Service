@@ -11,7 +11,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+ public class MainActivity extends AppCompatActivity {
     public static final String TAG="MainActivity";
 
     //password checker
@@ -25,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate called");
         setContentView(R.layout.activity_main);
+        /*
         if(savedInstanceState != null)
         {
             setContentView(R.layout.activity_main_land);
@@ -32,23 +36,12 @@ public class MainActivity extends AppCompatActivity {
         else
         {
             setContentView(R.layout.activity_main);
-        }
+        }*/
+
+
+
     }
 
-    /*
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-
-            if(newConfig.orientation==Configuration.ORIENTATION_LANDSCAPE)
-            {
-                setContentView(R.layout.activity_main_land);
-            }
-            else
-            {
-                setContentView(R.layout.activity_main);
-            }
-    }*/
 
     @Override
     protected void onSaveInstanceState(@NonNull Bundle savedInstanceState) {
@@ -60,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         Log.d(TAG, "onStart called");
+
     }
 
     @Override
@@ -91,24 +85,20 @@ public class MainActivity extends AppCompatActivity {
         TextView usernameField = findViewById(R.id.insertname);
         TextView passwordField = findViewById(R.id.TxtPassword);
 
+
         String usernameText =usernameField.getText().toString();
         String usernamePass =passwordField.getText().toString();
 
-
-
-        TextView errorLabel =findViewById(R.id.textView3);
         if(usernameText.equals(dummyName) && usernamePass.equals(dummyPass))
         {
-            errorLabel.setTextColor(Color.GREEN);
-            errorLabel.setText("Successful");
             Intent CrimeReportOptionsScreen = new Intent(MainActivity.this, CrimeReportOptions.class);
             startActivity(CrimeReportOptionsScreen);
         }
         else
         {
-            errorLabel.setTextColor(Color.RED);
-            errorLabel.setText("incorrect");
+            passwordField.setError("wrong username or password");
         }
+
     }
 
     public void clickReg(View view) {
@@ -116,3 +106,5 @@ public class MainActivity extends AppCompatActivity {
         startActivity(registrationScreen);
     }
 }
+
+
