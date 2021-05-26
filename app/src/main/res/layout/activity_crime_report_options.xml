@@ -121,15 +121,6 @@
             app:cornerRadius="15dp" />
 
         <Button
-            android:id="@+id/policeRatingsButton2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5sp"
-            android:backgroundTint="@color/cardview_dark_background"
-            android:text="@string/police_ratings"
-            app:cornerRadius="15dp" />
-
-        <Button
             android:id="@+id/button6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -31,5 +31,12 @@
     <string name="ProfileUserName">Md.Eunusur Rahaman Bhuiyan</string>
     <string name="ProfileUserMobile">" +880 1521430101"</string>
     <string name="ComplainAccuserName">Name of the accuser</string>
+    <string name="back">back</string>
+    <string name="dummy_title">dummy title</string>
+    <string name="previous_data">previous data</string>
+    <string name="police_ratings">police rating</string>
+    <string name="rate_your_investigation_officer">rate your investigation officer</string>
+    <string name="submit_rating">submit rating</string>
+
 
 </resources>
