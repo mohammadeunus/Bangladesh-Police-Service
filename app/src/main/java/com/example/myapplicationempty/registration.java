@@ -1,42 +1,22 @@
 package com.example.myapplicationempty;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ProgressBar;
-import android.widget.Toast;
-
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthUserCollisionException;
-
-import com.google.firebase.firestore.FirebaseFirestore;
-
+import android.widget.TextView;
 
 public class registration extends AppCompatActivity {
     public static final String TAG="registration";
-    EditText mNidNumber,mUserName,mMobileNumber,mEmail,mPassword;
-    FirebaseFirestore fStore;
-    FirebaseAuth fAuth;
-    ProgressBar progressBar1;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
-        fAuth = FirebaseAuth.getInstance();
-        fStore = FirebaseFirestore.getInstance();
-        progressBar1 = findViewById(R.id.progressBar3);
-        if(fAuth.getCurrentUser() != null){
-            startActivity(new Intent(registration.this,MainActivity.class));
-            finish();
-        }
 
     }
     @Override
@@ -70,65 +50,9 @@ public class registration extends AppCompatActivity {
     }
 
     public void ans2reg(View view) {
-        mUserName   = findViewById(R.id.editTextTextPersonName3);
-        mNidNumber = findViewById(R.id.editTextNumber);
-        mEmail      = findViewById(R.id.editTextTextEmailAddress);
-        mPassword   = findViewById(R.id.editTextTextPassword);
-        mMobileNumber = findViewById(R.id.editTextPhone);
-        errorCheck();
-
-    }
-    private void errorCheck(){
-        String nidNumberForViewById =mNidNumber.getText().toString();
-        String maEmail= mEmail.getText().toString();
-        String maPassword=mPassword.getText().toString();
-        String maMobileNumber=mMobileNumber.getText().toString();
-        String maUserName=mUserName.getText().toString();
-
-        if(nidNumberForViewById.length() != 7)
-        {
-            mNidNumber.setError("incorrect, provide at least 7digit");
-        }
-        if(TextUtils.isEmpty(maEmail))
-        {
-            mEmail.setError("email required");
-        }
-        if(maMobileNumber.length() !=11)
-        {
-            mMobileNumber.setError("invalid mobile number");
-        }
-        if(maPassword.length() <6)
-        {
-            mPassword.setError("password has to be at least 7char");
-        }
-        if(maUserName.length() <5)
-        {
-            mUserName.setError("invalid username");
-        }
-        if(nidNumberForViewById.length() < 7 && !TextUtils.isEmpty(maEmail ) && maMobileNumber.length() ==11 && maPassword.length() > 5 && maUserName.length() >=5)
-        {
-            firebaseSignUp();
-        }
-    }
-    private void firebaseSignUp()
-    {
-        String maEmail= mEmail.getText().toString();
-        String maPassword=mPassword.getText().toString();
-        progressBar1.setVisibility(View.VISIBLE);
-        fAuth.createUserWithEmailAndPassword(maEmail,maPassword).addOnCompleteListener(this, task -> {
-            progressBar1.setVisibility(View.INVISIBLE);
-            if (task.isSuccessful()) {
-
-                Toast.makeText(getApplicationContext(), "register successful.",Toast.LENGTH_SHORT).show();
-
-            } else {
-                if(task.getException() instanceof FirebaseAuthUserCollisionException)
-                {
-                    Toast.makeText(getApplicationContext(), "Error."+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
-                }
-
-            }
-        });
+        startActivity(new Intent(getApplicationContext(),MainActivity.class));
     }
 }
+
+
 
