@@ -78,7 +78,6 @@
             android:layout_margin="5sp"
             android:backgroundTint="@color/cardview_dark_background"
             android:text="@string/button1"
-            android:onClick="ButtonComplain"
             app:cornerRadius="15dp" />
 
         <Button
