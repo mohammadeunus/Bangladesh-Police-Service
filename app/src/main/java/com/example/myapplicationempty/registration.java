@@ -90,10 +90,10 @@ public class registration extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         ReProgressbar.setVisibility(View.INVISIBLE);
                         if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(), "Registration successful.", Toast.LENGTH_SHORT).show();// NOT WORKING
+                            Toast.makeText(getApplicationContext(), "Registration successful.", Toast.LENGTH_SHORT).show();// NOT SHOWING
                             startActivity(new Intent(getApplicationContext(),CrimeReportOptions.class));
                         } else {
-                            Toast.makeText(getApplicationContext(), "Registration failed.\n"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Registration failed.\n"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();// NOT SHOWING
                         }
                     }
                 });
