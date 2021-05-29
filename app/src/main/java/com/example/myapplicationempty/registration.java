@@ -23,6 +23,7 @@ public class registration extends AppCompatActivity {
     public static final String TAG="registration";
     private FirebaseAuth mAuth;
     TextView ReEmail,RePass;
+    ProgressBar ReProgressbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class registration extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         ReEmail = findViewById(R.id.ActReEmail);
         RePass=findViewById(R.id.ActRePass);
+        ReProgressbar=findViewById(R.id.ActReProgressBar);
     }
 
     @Override
@@ -81,12 +83,14 @@ public class registration extends AppCompatActivity {
     {
         String StrRePassCP = RePass.getText().toString();
         String StrReEmailCP= ReEmail.getText().toString();
+        ReProgressbar.setVisibility(View.VISIBLE);
         mAuth.createUserWithEmailAndPassword(StrReEmailCP,StrRePassCP)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+                        ReProgressbar.setVisibility(View.INVISIBLE);
                         if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(), "Registration successful.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Registration successful.", Toast.LENGTH_SHORT).show();// NOT WORKING
                             startActivity(new Intent(getApplicationContext(),CrimeReportOptions.class));
                         } else {
                             Toast.makeText(getApplicationContext(), "Registration failed.\n"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
@@ -96,42 +100,6 @@ public class registration extends AppCompatActivity {
 
     }
 }
-/*mAuth.createUserWithEmailAndPassword(email, password)
-        .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()) {
-                    // Sign in success, update UI with the signed-in user's information
-                    Log.d(TAG, "createUserWithEmail:success");
-                    FirebaseUser user = mAuth.getCurrentUser();
-                    updateUI(user);
-                } else {
-                    // If sign in fails, display a message to the user.
-                    Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                    Toast.makeText(EmailPasswordActivity.this, "Authentication failed.",
-                            Toast.LENGTH_SHORT).show();
-                    updateUI(null);
-                }
-            }
-        });
-       */
 
-/*
-mAuth.createUserWithEmailAndPassword(StrRePassCP,StrReEmailCP).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task)
-            {
-
-                if(task.isSuccessful())
-                {
-                    startActivity(new Intent(getApplicationContext(),CrimeReportOptions.class));
-                }
-                else
-                {
-                    Toast.makeText(getApplicationContext(), "login failed.\n"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
- */
 
 
