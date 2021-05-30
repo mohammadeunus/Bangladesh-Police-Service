@@ -1,0 +1,24 @@
+com/example/myapplicationempty/BuildConfig.java
+ com.example.myapplicationempty.BuildConfig
+com/example/myapplicationempty/MainActivity.java
+ com.example.myapplicationempty.MainActivity
+ com.example.myapplicationempty.MainActivity$1
+com/example/myapplicationempty/CrimeReportOptions.java
+ com.example.myapplicationempty.CrimeReportOptions
+ com.example.myapplicationempty.CrimeReportOptions$1
+ com.example.myapplicationempty.CrimeReportOptions$2
+ com.example.myapplicationempty.CrimeReportOptions$3
+com/example/myapplicationempty/PreviousData.java
+ com.example.myapplicationempty.PreviousData
+ com.example.myapplicationempty.PreviousData$1
+com/example/myapplicationempty/PoliceRatings.java
+ com.example.myapplicationempty.PoliceRatings
+ com.example.myapplicationempty.PoliceRatings$1
+ com.example.myapplicationempty.PoliceRatings$2
+com/example/myapplicationempty/Complain.java
+ com.example.myapplicationempty.Complain
+com/example/myapplicationempty/user_profile.java
+ com.example.myapplicationempty.user_profile
+com/example/myapplicationempty/registration.java
+ com.example.myapplicationempty.registration
+ com.example.myapplicationempty.registration$1
