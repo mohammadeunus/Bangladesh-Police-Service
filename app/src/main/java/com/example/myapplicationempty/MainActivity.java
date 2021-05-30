@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
  public class MainActivity extends AppCompatActivity {
     public static final String TAG="MainActivity";
-     private FirebaseAuth mAuth;
+    private FirebaseAuth mAuth;
     ProgressBar progressBar2;
 
 

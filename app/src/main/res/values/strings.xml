@@ -16,7 +16,7 @@
     <string name="password">password</string>
     <string name="buttonReg">Register</string>
     <string name="textview4" />
-    <string name="Nid_number">Nid number</string>
+    <string name="Nid_number">Email address</string>
     <string name="nid_number_hints">17 digit nid number</string>
     <string name="RegistrationSuccessful">Registration Successful</string>
     <string name="incorrectNidnumber">incorrect Nid number</string>
@@ -37,6 +37,10 @@
     <string name="police_ratings">police rating</string>
     <string name="rate_your_investigation_officer">rate your investigation officer</string>
     <string name="submit_rating">submit rating</string>
+    <string name="email_address_hints">registered email</string>
+    <string name="Previous_data">Previsous Data</string>
+    <string name="ProfileName">Md.Eunusur Rahaman Bhuiyan</string>
+    <string name="ProfileMobileNumber">+880 1521430101</string>
 
 
 </resources>
