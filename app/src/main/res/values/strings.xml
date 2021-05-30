@@ -41,6 +41,9 @@
     <string name="Previous_data">Previsous Data</string>
     <string name="ProfileName">Md.Eunusur Rahaman Bhuiyan</string>
     <string name="ProfileMobileNumber">+880 1521430101</string>
+    <string name="occurance_date">Occurance date</string>
+    <string name="accuser_s_mobile_number">accusers mobile number</string>
+    <string name="complain_details">Complain details</string>
 
 
 </resources>
