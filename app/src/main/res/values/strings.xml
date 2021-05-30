@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BD Police Services</string>
+    <string name="app_name">Report Crime</string>
     <string name="home_page"> </string>
     <string name="textview1">User Name</string>
     <string name="textview2">Password</string>
@@ -16,7 +16,7 @@
     <string name="password">password</string>
     <string name="buttonReg">Register</string>
     <string name="textview4" />
-    <string name="Nid_number">Email address</string>
+    <string name="Nid_number">Nid number</string>
     <string name="nid_number_hints">17 digit nid number</string>
     <string name="RegistrationSuccessful">Registration Successful</string>
     <string name="incorrectNidnumber">incorrect Nid number</string>
@@ -26,21 +26,14 @@
     <string name="button3">Missing person</string>
     <string name="button4">Cyber crime</string>
     <string name="button5">Read the instruction</string>
-    <string name="ComplainTypeOfCrime">Complain Type</string>
-    <string name="ComplainTitle">COMPLAINT AGAINST</string>
-    <string name="ProfileUserName">Md.Eunusur Rahaman Bhuiyan</string>
-    <string name="ProfileUserMobile">" +880 1521430101"</string>
-    <string name="ComplainAccuserName">Name of the accuser</string>
-    <string name="back">back</string>
-    <string name="dummy_title">dummy title</string>
-    <string name="previous_data">previous data</string>
-    <string name="police_ratings">police rating</string>
-    <string name="rate_your_investigation_officer">rate your investigation officer</string>
-    <string name="submit_rating">submit rating</string>
-    <string name="email_address_hints">registered email</string>
-    <string name="Previous_data">Previsous Data</string>
-    <string name="ProfileName">Md.Eunusur Rahaman Bhuiyan</string>
-    <string name="ProfileMobileNumber">+880 1521430101</string>
-
-
+    <string name="previous_data">Previous Data</string>
+    <string name="back">Back to the homescreen</string>
+    <string name="dummy_title">Dummy Title</string>
+    <string name="police_ratings">Police Ratings</string>
+    <string name="submit">Submit</string>
+    <string name="rate_your_investigation_officer">Rate your invastigation officer</string>
+    <string name="submit_rating">Submit Rating</string>
+    <string name="viewStyle">User Rated</string>
+    <string name="search_title">Search Title</string>
+    <string name="search">Search</string>
 </resources>

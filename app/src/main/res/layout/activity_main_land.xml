@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/home_page"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:paddingLeft="45dp"
+    android:paddingRight="45dp"
+    android:paddingEnd="45dp"
+    android:background="@drawable/gradientbackground"
+    >
+
+    <ImageView
+        android:id="@+id/userImageProfile"
+        android:layout_width="149dp"
+        android:layout_height="102dp"
+        android:layout_gravity="center"
+        android:src="@drawable/pci">
+
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_margin="10dp"
+            android:id="@+id/textview1"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="cursive"
+            android:lineSpacingExtra="24sp"
+            android:text="@string/Nid_number"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:typeface="normal"
+            />
+
+        <EditText
+            android:id="@+id/insertname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".82"
+            android:layout_margin="10dp"
+            android:accessibilityLiveRegion="assertive"
+            android:hint="@string/nid_number_hints"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:inputType="textPersonName"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="12sp"
+            android:typeface="normal"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_margin="10dp"
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="cursive"
+            android:text="@string/textview2"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:id="@+id/TxtPassword"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:inputType="textPassword"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="311dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/cardview_dark_background"
+        android:fontFamily="cursive"
+        android:onClick="ans2signIn"
+        android:text="@string/button"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="24sp"
+        android:typeface="normal" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/textview3"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_light" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="206dp"
+        android:layout_height="17dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:background="#dadada"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="clickReg"
+        android:text="@string/registerlink"
+        android:textAlignment="center" />
+</LinearLayout>

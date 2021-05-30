@@ -9,9 +9,23 @@
     android:layout_height="match_parent"
     tools:context=".PreviousData">
 
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="36dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="@string/viewStyle"
+        android:textColor="#6BFFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-condensed-light"
@@ -20,10 +34,11 @@
         android:textColor="#6BFFFFFF"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -87,111 +102,177 @@
             android:layout_height="wrap_content"
             android:id="@+id/layout1"
             android:orientation="vertical">
-            <TextView
-                android:id="@+id/textView12"
+
+            <LinearLayout
+                android:background="@drawable/police_rating_layout_drawable"
+                android:layout_marginBottom="8dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#C0C0C0"
-                android:fontFamily="sans-serif-condensed"
-                android:paddingBottom="10dp"
-                android:textSize="20sp"
-                android:text="Officer1 (You rated this officer)" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <RatingBar
-                android:id="@+id/ratingBar1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:numStars="5"
-                android:stepSize="0.5" />
+                <TextView
+                    android:textAlignment="center"
+                    android:id="@+id/textView14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingBottom="10dp"
+                    android:text="Officer1"
+                    android:textColor="#C0C0C0"
+                    android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/textView14"
+                <RatingBar
+                    android:layout_gravity="center"
+                    android:id="@+id/ratingBar3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:rating="3"
+                    android:stepSize="0.5" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/police_rating_layout_drawable"
+                android:layout_marginBottom="8dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#C0C0C0"
-                android:fontFamily="sans-serif-condensed"
-                android:paddingBottom="10dp"
-                android:textSize="20sp"
-                android:text="Officer2" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <RatingBar
-                android:id="@+id/ratingBar3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:numStars="5"
-                android:rating="3"
-                android:stepSize="0.5" />
+                <TextView
+                    android:textAlignment="center"
+                    android:id="@+id/textView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingBottom="10dp"
+                    android:text="Officer2 (You rated this officer)"
+                    android:textColor="#C0C0C0"
+                    android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/textView15"
+                <RatingBar
+                    android:layout_gravity="center"
+                    android:id="@+id/ratingBar1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:stepSize="0.5" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/police_rating_layout_drawable"
+                android:layout_marginBottom="8dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#C0C0C0"
-                android:fontFamily="sans-serif-condensed"
-                android:paddingBottom="10dp"
-                android:textSize="20sp"
-                android:text="Officer3" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <RatingBar
-                android:id="@+id/ratingBar4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:numStars="5"
-                android:rating="3.5"
-                android:stepSize="0.5" />
+                <TextView
+                    android:textAlignment="center"
+                    android:id="@+id/textView15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingBottom="10dp"
+                    android:text="Officer3"
+                    android:textColor="#C0C0C0"
+                    android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/textView16"
+                <RatingBar
+                    android:layout_gravity="center"
+                    android:id="@+id/ratingBar4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:rating="3.5"
+                    android:stepSize="0.5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/police_rating_layout_drawable"
+                android:layout_marginBottom="8dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#C0C0C0"
-                android:fontFamily="sans-serif-condensed"
-                android:paddingBottom="10dp"
-                android:textSize="20sp"
-                android:text="Officer4" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <RatingBar
-                android:id="@+id/ratingBar5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:numStars="5"
-                android:rating="1.5"
-                android:stepSize="0.5" />
-            <TextView
-                android:id="@+id/textView17"
+                <TextView
+                    android:textAlignment="center"
+                    android:id="@+id/textView16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingBottom="10dp"
+                    android:text="Officer4"
+                    android:textColor="#C0C0C0"
+                    android:textSize="20sp" />
+
+                <RatingBar
+                    android:layout_gravity="center"
+                    android:id="@+id/ratingBar5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:rating="1.5"
+                    android:stepSize="0.5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/police_rating_layout_drawable"
+                android:layout_marginBottom="8dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#C0C0C0"
-                android:fontFamily="sans-serif-condensed"
-                android:paddingBottom="10dp"
-                android:textSize="20sp"
-                android:text="Officer5" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <RatingBar
-                android:id="@+id/ratingBar6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:numStars="5"
-                android:rating="4.5"
-                android:stepSize="0.5" />
+                <TextView
+                    android:textAlignment="center"
+                    android:id="@+id/textView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingBottom="10dp"
+                    android:text="Officer5"
+                    android:textColor="#C0C0C0"
+                    android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/textView13"
+                <RatingBar
+                    android:layout_gravity="center"
+                    android:id="@+id/ratingBar6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:rating="4.5"
+                    android:stepSize="0.5" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/police_rating_layout_drawable"
+                android:layout_marginBottom="8dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#C0C0C0"
-                android:fontFamily="sans-serif-condensed"
-                android:paddingBottom="10dp"
-                android:textSize="20sp"
-                android:text="Officer6" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <RatingBar
-                android:id="@+id/ratingBar2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:numStars="5"
-                android:rating="2.5"
-                android:stepSize="0.5" />
+                <TextView
+                    android:textAlignment="center"
+                    android:id="@+id/textView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingBottom="10dp"
+                    android:text="Officer6"
+                    android:textColor="#C0C0C0"
+                    android:textSize="20sp" />
+
+                <RatingBar
+                    android:layout_gravity="center"
+                    android:id="@+id/ratingBar2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:rating="2.5"
+                    android:stepSize="0.5" />
+            </LinearLayout>
+
         </LinearLayout>
 
 

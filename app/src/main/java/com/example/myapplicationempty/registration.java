@@ -1,40 +1,31 @@
 package com.example.myapplicationempty;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
 
 public class registration extends AppCompatActivity {
     public static final String TAG="registration";
-    private FirebaseAuth mAuth;
-    TextView ReEmail,RePass;
-    ProgressBar ReProgressbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
-        mAuth = FirebaseAuth.getInstance();
-        ReEmail = findViewById(R.id.ActReEmail);
-        RePass=findViewById(R.id.ActRePass);
-        ReProgressbar=findViewById(R.id.ActReProgressBar);
+        if(savedInstanceState != null)
+        {
+            setContentView(R.layout.activity_registration_land);
+        }
+        else
+        {
+            setContentView(R.layout.activity_registration);
+        }
     }
-
     @Override
     protected void onStart() {
         super.onStart();
@@ -66,40 +57,20 @@ public class registration extends AppCompatActivity {
     }
 
     public void ans2reg(View view) {
-        String StrRePass = RePass.getText().toString();
-        String StrReEmail= ReEmail.getText().toString();
-
-        startActivity(new Intent(getApplicationContext(),MainActivity.class));
-        if(StrRePass.length() <6)
+        EditText editTextNumberForViewById = findViewById(R.id.editTextNumber);
+        String nidNumberForViewById =editTextNumberForViewById.getText().toString();
+        TextView textviewError2 =findViewById(R.id.textviewError2);
+        if(nidNumberForViewById.length() == 17)
         {
-            RePass.setError("password has to be at least 7char");
+            textviewError2.setTextColor(Color.GREEN);
+            textviewError2.setText("Registration Successful");
+            Intent MainActivityScreen = new Intent(registration.this, MainActivity.class);
+            startActivity(MainActivityScreen);
         }
-        if(!TextUtils.isEmpty(StrReEmail) && StrRePass.length() >5)
+        else
         {
-            firebaseSignUP();
+            textviewError2.setTextColor(Color.RED);
+            textviewError2.setText("incorrect");
         }
-    }
-    private void firebaseSignUP()
-    {
-        String StrRePassCP = RePass.getText().toString();
-        String StrReEmailCP= ReEmail.getText().toString();
-        ReProgressbar.setVisibility(View.VISIBLE);
-        mAuth.createUserWithEmailAndPassword(StrReEmailCP,StrRePassCP)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        ReProgressbar.setVisibility(View.INVISIBLE);
-                        if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(), "Registration successful.", Toast.LENGTH_SHORT).show();// NOT SHOWING
-                            startActivity(new Intent(getApplicationContext(),CrimeReportOptions.class));
-                        } else {
-                            Toast.makeText(getApplicationContext(), "Registration failed.\n"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();// NOT SHOWING
-                        }
-                    }
-                });
-
     }
 }
-
-
-
