@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:background="@drawable/gradientbackground"
+    tools:context=".registration">
+
+    <ImageView
+        android:id="@+id/userImageProfile"
+        android:layout_width="130dp"
+        android:layout_height="106dp"
+        android:layout_gravity="center"
+        android:src="@drawable/pci">
+    </ImageView>
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="554dp"
+        android:layout_height="32dp"
+        android:layout_margin="5dp"
+        android:ems="10"
+        android:textSize="10sp"
+        android:hint="@string/nid_number_hints"
+        android:importantForAutofill="no"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName3"
+        android:layout_width="554dp"
+        android:layout_height="32dp"
+        android:layout_margin="5dp"
+        android:textSize="10sp"
+        android:ems="10"
+        android:hint="@string/username"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="554dp"
+        android:layout_height="32dp"
+        android:textSize="10sp"
+        android:layout_margin="5dp"
+        android:ems="10"
+        android:hint="@string/mobile_number"
+        android:importantForAutofill="no"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="554dp"
+        android:layout_height="32dp"
+        android:textSize="10sp"
+        android:layout_margin="5dp"
+        android:ems="10"
+        android:hint="@string/email_address"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="554dp"
+        android:layout_height="32dp"
+        android:textSize="10sp"
+        android:layout_margin="5dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:importantForAutofill="no"
+        android:inputType="textPassword" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/buttonReg"
+            android:layout_width="178dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/cardview_dark_background"
+            android:fontFamily="cursive"
+            android:onClick="ans2reg"
+            android:text="@string/buttonReg"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="15sp"
+            android:typeface="normal" />
+
+        <TextView
+            android:id="@+id/textviewError2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:layout_gravity="center"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+
+</LinearLayout>

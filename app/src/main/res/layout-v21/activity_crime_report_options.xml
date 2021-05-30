@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -30,8 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingStart="10dp"
-            android:paddingEnd="0dp">
+            android:paddingStart="10dp">
 
             <TextView
                 android:id="@+id/verifiedUser"
@@ -43,7 +43,7 @@
                 android:onClick="profile"
                 android:focusable="true"
                 android:clickable="true"
-                android:text="@string/ProfileName"
+                android:text="Md.Eunusur Rahaman Bhuiyan"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textSize="15sp"
@@ -55,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif"
                 android:lineSpacingExtra="24sp"
-                android:text="@string/ProfileMobileNumber"
+                android:text=" +880 1521430101"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textSize="14sp"
