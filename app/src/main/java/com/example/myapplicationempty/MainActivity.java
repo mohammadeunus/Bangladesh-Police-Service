@@ -114,7 +114,6 @@ import com.google.firebase.auth.FirebaseAuth;
                 }
             }
         });
-
     }
 
     public void clickReg(View view) {
