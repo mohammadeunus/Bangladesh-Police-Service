@@ -4,41 +4,37 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthUserCollisionException;
-
-import com.google.firebase.firestore.FirebaseFirestore;
-
 
 public class registration extends AppCompatActivity {
     public static final String TAG="registration";
-    EditText mNidNumber,mUserName,mMobileNumber,mEmail,mPassword;
-    FirebaseFirestore fStore;
-    FirebaseAuth fAuth;
-    ProgressBar progressBar1;
-
+    private FirebaseAuth mAuth;
+    TextView ReEmail,RePass;
+    ProgressBar ReProgressbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
-        fAuth = FirebaseAuth.getInstance();
-        fStore = FirebaseFirestore.getInstance();
-        progressBar1 = findViewById(R.id.progressBar3);
-        if(fAuth.getCurrentUser() != null){
-            startActivity(new Intent(registration.this,MainActivity.class));
-            finish();
-        }
-
+        mAuth = FirebaseAuth.getInstance();
+        ReEmail = findViewById(R.id.ActReEmail);
+        RePass=findViewById(R.id.ActRePass);
+        ReProgressbar=findViewById(R.id.ActReProgressBar);
     }
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -70,65 +66,40 @@ public class registration extends AppCompatActivity {
     }
 
     public void ans2reg(View view) {
-        mUserName   = findViewById(R.id.editTextTextPersonName3);
-        mNidNumber = findViewById(R.id.editTextNumber);
-        mEmail      = findViewById(R.id.editTextTextEmailAddress);
-        mPassword   = findViewById(R.id.editTextTextPassword);
-        mMobileNumber = findViewById(R.id.editTextPhone);
-        errorCheck();
+        String StrRePass = RePass.getText().toString();
+        String StrReEmail= ReEmail.getText().toString();
 
-    }
-    private void errorCheck(){
-        String nidNumberForViewById =mNidNumber.getText().toString();
-        String maEmail= mEmail.getText().toString();
-        String maPassword=mPassword.getText().toString();
-        String maMobileNumber=mMobileNumber.getText().toString();
-        String maUserName=mUserName.getText().toString();
-
-        if(nidNumberForViewById.length() != 7)
+        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+        if(StrRePass.length() <6)
         {
-            mNidNumber.setError("incorrect, provide at least 7digit");
+            RePass.setError("password has to be at least 7char");
         }
-        if(TextUtils.isEmpty(maEmail))
+        if(!TextUtils.isEmpty(StrReEmail) && StrRePass.length() >5)
         {
-            mEmail.setError("email required");
-        }
-        if(maMobileNumber.length() !=11)
-        {
-            mMobileNumber.setError("invalid mobile number");
-        }
-        if(maPassword.length() <6)
-        {
-            mPassword.setError("password has to be at least 7char");
-        }
-        if(maUserName.length() <5)
-        {
-            mUserName.setError("invalid username");
-        }
-        if(nidNumberForViewById.length() < 7 && !TextUtils.isEmpty(maEmail ) && maMobileNumber.length() ==11 && maPassword.length() > 5 && maUserName.length() >=5)
-        {
-            firebaseSignUp();
+            firebaseSignUP();
         }
     }
-    private void firebaseSignUp()
+    private void firebaseSignUP()
     {
-        String maEmail= mEmail.getText().toString();
-        String maPassword=mPassword.getText().toString();
-        progressBar1.setVisibility(View.VISIBLE);
-        fAuth.createUserWithEmailAndPassword(maEmail,maPassword).addOnCompleteListener(this, task -> {
-            progressBar1.setVisibility(View.INVISIBLE);
-            if (task.isSuccessful()) {
+        String StrRePassCP = RePass.getText().toString();
+        String StrReEmailCP= ReEmail.getText().toString();
+        ReProgressbar.setVisibility(View.VISIBLE);
+        mAuth.createUserWithEmailAndPassword(StrReEmailCP,StrRePassCP)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        ReProgressbar.setVisibility(View.INVISIBLE);
+                        if (task.isSuccessful()) {
+                            Toast.makeText(getApplicationContext(), "Registration successful.", Toast.LENGTH_SHORT).show();// NOT SHOWING
+                            startActivity(new Intent(getApplicationContext(),CrimeReportOptions.class));
+                        } else {
+                            Toast.makeText(getApplicationContext(), "Registration failed.\n"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();// NOT SHOWING
+                        }
+                    }
+                });
 
-                Toast.makeText(getApplicationContext(), "register successful.",Toast.LENGTH_SHORT).show();
-
-            } else {
-                if(task.getException() instanceof FirebaseAuthUserCollisionException)
-                {
-                    Toast.makeText(getApplicationContext(), "Error."+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
-                }
-
-            }
-        });
     }
 }
+
+
 
