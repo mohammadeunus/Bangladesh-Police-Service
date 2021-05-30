@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "224574241320",
+    "project_id": "bangladeshpoliceauthen",
+    "storage_bucket": "bangladeshpoliceauthen.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224574241320:android:38c3780bf42aea86bbd31d",
+        "android_client_info": {
+          "package_name": "com.example.myapplicationempty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "224574241320-tkbjeal5anh24kqagjdivtg28o5cqhfr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2b31cMuCr9pjUnfX5tJKrb9EdvqXnppk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "224574241320-tkbjeal5anh24kqagjdivtg28o5cqhfr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
