@@ -41,6 +41,14 @@
     <string name="Previous_data">Previsous Data</string>
     <string name="ProfileName">Md.Eunusur Rahaman Bhuiyan</string>
     <string name="ProfileMobileNumber">+880 1521430101</string>
+    <string name="phone_number" />
+    <string name="permanent_address" />
+    <string name="father_s_name" />
+    <string name="mother_s_name" />
+    <string name="name" />
+    <string name="present_address" />
+    <string name="email" />
+    <string name="change_password" />
 
 
 </resources>

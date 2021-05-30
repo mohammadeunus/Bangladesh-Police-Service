@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     android:orientation="vertical"
     android:paddingTop="9dp"
-    android:background="@drawable/gradientbackground">
+    android:background="@drawable/gradientbackground"
+    tools:context=".CrimeReportOptions">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -47,8 +49,7 @@
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textSize="15sp"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/verifiedUserMobileNumber"
@@ -79,8 +80,7 @@
             android:layout_margin="5sp"
             android:backgroundTint="@color/cardview_dark_background"
             android:text="@string/button1"
-            app:cornerRadius="15dp"
-            />
+            app:cornerRadius="15dp" />
 
         <Button
             android:id="@+id/button3"
@@ -111,15 +111,6 @@
             app:cornerRadius="15dp" />
 
         <Button
-            android:id="@+id/previousDataButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5sp"
-            android:backgroundTint="@color/cardview_dark_background"
-            android:text="@string/Previous_data"
-            app:cornerRadius="15dp" />
-
-        <Button
             android:id="@+id/button6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -127,7 +118,32 @@
             android:backgroundTint="@color/cardview_dark_background"
             android:text="@string/button5"
             app:cornerRadius="15dp" />
-
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:backgroundTint="@color/cardview_dark_background"
+            android:text="Gallery"
+            android:onClick="gallery"
+            app:cornerRadius="15dp" />
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:backgroundTint="@color/cardview_dark_background"
+            android:text="Camera"
+            app:cornerRadius="15dp" />
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:backgroundTint="@color/cardview_dark_background"
+            android:text="Location"
+            android:onClick="Maps"
+            app:cornerRadius="15dp" />
     </LinearLayout>
 
 </LinearLayout>

@@ -1847,6 +1847,8 @@ id button4
 id button5
 id button6
 id button7
+id button8
+id button9
 id buttonPanel
 id buttonReg
 id cache_measures
@@ -2441,6 +2443,7 @@ string button3
 string button4
 string button5
 string buttonReg
+string change_password
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
@@ -2466,12 +2469,14 @@ string common_signin_button_text
 string common_signin_button_text_long
 string default_web_client_id
 string dummy_title
+string email
 string email_address
 string email_address_hints
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string father_s_name
 string first_name
 string gcm_defaultSenderId
 string google_api_key
@@ -2501,6 +2506,7 @@ string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
 string mobile_number
+string mother_s_name
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
 string mtrl_exceed_max_badge_number_content_description
@@ -2536,6 +2542,7 @@ string mtrl_picker_toggle_to_calendar_input_mode
 string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
+string name
 string nid_number_hints
 string password
 string password_toggle_content_description
@@ -2543,7 +2550,10 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string permanent_address
+string phone_number
 string police_ratings
+string present_address
 string previous_data
 string project_id
 string rate_your_investigation_officer
