@@ -4,20 +4,23 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.res.Configuration;
-import android.graphics.Color;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
+ public class MainActivity extends AppCompatActivity {
     public static final String TAG="MainActivity";
-
-    //password checker
-    //dummy
-    String dummyPass="test";
-    String dummyName = "test";
+    private FirebaseAuth mAuth;
+    ProgressBar progressBar2;
 
 
     @Override
@@ -25,30 +28,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate called");
         setContentView(R.layout.activity_main);
-        if(savedInstanceState != null)
-        {
-            setContentView(R.layout.activity_main_land);
-        }
-        else
-        {
-            setContentView(R.layout.activity_main);
-        }
+        mAuth = FirebaseAuth.getInstance();
+        progressBar2 = findViewById(R.id.progressBar2);
+
     }
 
-    /*
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-
-            if(newConfig.orientation==Configuration.ORIENTATION_LANDSCAPE)
-            {
-                setContentView(R.layout.activity_main_land);
-            }
-            else
-            {
-                setContentView(R.layout.activity_main);
-            }
-    }*/
 
     @Override
     protected void onSaveInstanceState(@NonNull Bundle savedInstanceState) {
@@ -60,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         Log.d(TAG, "onStart called");
+
     }
 
     @Override
@@ -86,33 +71,53 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onResume called");
     }
 
+
     public void ans2signIn(View view) {
-        //read text from editText file
+        TextView usernameField0 = findViewById(R.id.insertname);
+        TextView passwordField0 = findViewById(R.id.TxtPassword);
+
+
+        String usernameText =usernameField0.getText().toString();
+        String usernamePass =passwordField0.getText().toString();
+
+        if(usernamePass.length() <6)
+        {
+            passwordField0.setError("password has to be at least 7char");
+        }
+        if(!TextUtils.isEmpty(usernameText) && usernamePass.length() >5)
+        {
+            firebaseSignIN();
+        }
+
+    }
+    private void firebaseSignIN()
+    {
         TextView usernameField = findViewById(R.id.insertname);
         TextView passwordField = findViewById(R.id.TxtPassword);
 
         String usernameText =usernameField.getText().toString();
         String usernamePass =passwordField.getText().toString();
 
-
-
-        TextView errorLabel =findViewById(R.id.textView3);
-        if(usernameText.equals(dummyName) && usernamePass.equals(dummyPass))
-        {
-            errorLabel.setTextColor(Color.GREEN);
-            errorLabel.setText("Successful");
-            Intent CrimeReportOptionsScreen = new Intent(MainActivity.this, CrimeReportOptions.class);
-            startActivity(CrimeReportOptionsScreen);
-        }
-        else
-        {
-            errorLabel.setTextColor(Color.RED);
-            errorLabel.setText("incorrect");
-        }
+        progressBar2.setVisibility(View.VISIBLE);
+        mAuth.signInWithEmailAndPassword(usernameText,usernamePass).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task)
+            {
+                progressBar2.setVisibility(View.INVISIBLE);
+                if(task.isSuccessful())
+                {
+                    startActivity(new Intent(getApplicationContext(),CrimeReportOptions.class));
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(), "login failed.\n"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
     public void clickReg(View view) {
-        Intent registrationScreen =new Intent(MainActivity.this, registration.class);
+        Intent registrationScreen =new Intent(getApplicationContext(), registration.class);
         startActivity(registrationScreen);
     }
 }

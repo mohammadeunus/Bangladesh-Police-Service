@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplicationEmpty">
+        <activity android:name=".Complain"/>
         <activity android:name=".PoliceRatings"/>
         <activity android:name=".PreviousData" />
         <activity android:name=".user_profile" />

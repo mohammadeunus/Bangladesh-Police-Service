@@ -20,7 +20,7 @@
     </ImageView>
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/SuNidNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -30,7 +30,7 @@
         />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/ActReUserName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -40,7 +40,7 @@
         />
 
     <EditText
-        android:id="@+id/editTextPhone"
+        android:id="@+id/ActReMobileNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -50,7 +50,7 @@
         />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/ActReEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -60,7 +60,7 @@
         />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/ActRePass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -82,11 +82,13 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="15sp"
         android:typeface="normal" />
-    <TextView
-        android:id="@+id/textviewError2"
+
+    <ProgressBar
+        android:id="@+id/ActReProgressBar"
+        style="?android:attr/progressBarStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
+        android:visibility="invisible"
         />
 
 </LinearLayout>
