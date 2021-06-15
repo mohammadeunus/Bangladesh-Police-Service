@@ -20,9 +20,10 @@ Scope
 
 According to a recent survey conducted by Cyber Crime Awareness Foundation, 80 percent of cyber crime victims do not report the cases to law enforcement agencies [the daily star,2019]. and  almost 73 percent of people are not satisfied after complaining to the police  because they are not successfully being reported or investigated and many more reasons [bangladesh post, 2020].
 The scope of the system will include bringing more and more transparency in the law and order process by getting the entire system online so that the people using the system have a managed proof of the complaints raised.
-The user will be able to provide feedback along with a rating against the investigation officer who will conduct his/her case, And the ratings will be visible to everyone thus this will greatly reduce the distaste toward solving police cases from the side of police.  
-A user will be able ask his queries and the officer will answer them.even though the queries will be viewed only by the investigation officer and the complainer it will be automatically saved in online database 
-And All the information about the missing or found person will be stored in the MySQL database and these includes the name, location, age, gender, relationship type, case status and two photos for a missing person and name, location, age, gender, life status, case status and two photos for a found person. One major issue needs to be included that, all the missing and found person  names and details will need to be merged manually by the admin panel but, we will introduce AI to merge them in future updates.
+
+WITHIN SCOPE
+
+OUT OF SCOPE
 
 Objective
 
