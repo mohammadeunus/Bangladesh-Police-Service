@@ -2429,6 +2429,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string accuser_s_mobile_number
 string app_name
 string appbar_scrolling_view_behavior
 string back
@@ -2464,6 +2465,7 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string complain_details
 string default_web_client_id
 string dummy_title
 string email_address
@@ -2537,6 +2539,7 @@ string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
 string nid_number_hints
+string occurance_date
 string password
 string password_toggle_content_description
 string path_password_eye

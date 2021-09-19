@@ -1,4 +1,4 @@
- package com.example.myapplicationempty;
+package com.example.myapplicationempty;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +12,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.myapplicationempty.CrimeReportOptions;
+import com.example.myapplicationempty.R;
+import com.example.myapplicationempty.registration;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -30,7 +33,6 @@ import com.google.firebase.auth.FirebaseAuth;
         setContentView(R.layout.activity_main);
         mAuth = FirebaseAuth.getInstance();
         progressBar2 = findViewById(R.id.progressBar2);
-
     }
 
 
@@ -106,7 +108,7 @@ import com.google.firebase.auth.FirebaseAuth;
                 progressBar2.setVisibility(View.INVISIBLE);
                 if(task.isSuccessful())
                 {
-                    startActivity(new Intent(getApplicationContext(),CrimeReportOptions.class));
+                    startActivity(new Intent(getApplicationContext(), CrimeReportOptions.class));
                 }
                 else
                 {
