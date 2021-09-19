@@ -36,16 +36,15 @@ public class registration extends AppCompatActivity {
 
     }
 
-    //singleton 
+    //singleton
     nameit Nameit = nameit.getInstance(Username.toString());
     String userNameSingleton= Nameit.getName();
-
 
     public void ans2reg(View view) {
         String StrRePass = RePass.getText().toString();
         String StrReEmail= ReEmail.getText().toString();
 
-        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        startActivity(new Intent(getApplicationContext(),MainActivity.class));
         if(StrRePass.length() <6)
         {
             RePass.setError("password has to be at least 7char");
@@ -55,6 +54,8 @@ public class registration extends AppCompatActivity {
             firebaseSignUP();
         }
     }
+
+
     private void firebaseSignUP()
     {
         String StrRePassCP = RePass.getText().toString();
@@ -75,12 +76,9 @@ public class registration extends AppCompatActivity {
                     }
                 });
     }
-
-
-
 }
 
-//singleton apply
+
 class nameit
 {
     private String name;

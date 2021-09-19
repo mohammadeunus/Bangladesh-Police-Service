@@ -20,5 +20,6 @@ com/example/myapplicationempty/Complain.java
 com/example/myapplicationempty/user_profile.java
  com.example.myapplicationempty.user_profile
 com/example/myapplicationempty/registration.java
+ com.example.myapplicationempty.nameit
  com.example.myapplicationempty.registration
  com.example.myapplicationempty.registration$1
